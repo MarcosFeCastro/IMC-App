@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.calculator.CalculatorFragment" >
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="pesoTv, pesoEt, alturaTv, alturaEt, idadeTv, idadeEt, sexoTv, sexoRadioGroup"
+        app:layout_constraintEnd_toEndOf="@id/text_calculator"
+        app:layout_constraintStart_toStartOf="@id/text_calculator"
+        app:layout_constraintTop_toBottomOf="@id/text_calculator" />
+
+    <TextView
+        android:id="@+id/text_calculator"
+        android:text="Calculadora"
+        android:textSize="32sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/pesoTv"
+        style="@style/tv_input_name"
+        android:text="@string/peso_txt"
+        app:layout_constraintEnd_toEndOf="@id/groupForm"
+        app:layout_constraintStart_toStartOf="@id/groupForm"
+        app:layout_constraintTop_toTopOf="@id/groupForm" />
+
+    <EditText
+        android:id="@+id/pesoEt"
+        style="@style/td_input"
+        android:inputType="numberDecimal"
+        android:hint="@string/peso_input"
+        app:layout_constraintTop_toBottomOf="@id/pesoTv"
+        app:layout_constraintStart_toStartOf="@id/groupForm"
+        app:layout_constraintEnd_toEndOf="@id/groupForm" />
+
+    <TextView
+        android:id="@+id/alturaTv"
+        style="@style/tv_input_name"
+        android:text="@string/altura_txt"
+        app:layout_constraintTop_toBottomOf="@id/pesoEt"
+        app:layout_constraintStart_toStartOf="@id/groupForm"
+        app:layout_constraintEnd_toEndOf="@id/groupForm" />
+
+    <EditText
+        android:id="@+id/alturaEt"
+        style="@style/td_input"
+        android:inputType="numberDecimal"
+        android:hint="@string/altura_input"
+        app:layout_constraintTop_toBottomOf="@id/alturaTv"
+        app:layout_constraintStart_toStartOf="@id/groupForm"
+        app:layout_constraintEnd_toEndOf="@id/groupForm" />
+
+    <TextView
+        android:id="@+id/idadeTv"
+        style="@style/tv_input_name"
+        android:text="@string/idade_txt"
+        app:layout_constraintTop_toBottomOf="@id/alturaEt"
+        app:layout_constraintStart_toStartOf="@id/groupForm"
+        app:layout_constraintEnd_toEndOf="@id/groupForm" />
+
+    <EditText
+        android:id="@+id/idadeEt"
+        style="@style/td_input"
+        android:inputType="number"
+        android:hint="@string/idade_input"
+        app:layout_constraintTop_toBottomOf="@id/idadeTv"
+        app:layout_constraintStart_toStartOf="@id/groupForm"
+        app:layout_constraintEnd_toEndOf="@id/groupForm" />
+
+    <TextView
+        android:id="@+id/sexoTv"
+        style="@style/tv_input_name"
+        android:text="@string/sexo_txt"
+        app:layout_constraintTop_toBottomOf="@id/idadeEt"
+        app:layout_constraintStart_toStartOf="@id/text_calculator"
+        app:layout_constraintEnd_toEndOf="@id/text_calculator" />
+
+    <RadioGroup
+        android:id="@+id/sexoRadioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@id/text_calculator"
+        app:layout_constraintStart_toStartOf="@id/text_calculator"
+        app:layout_constraintTop_toBottomOf="@id/sexoTv" >
+
+        <RadioButton
+            android:id="@+id/maleRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/male"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/femaleRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/female" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/calcularBtn"
+        android:text="@string/result_btn"
+        style="@style/btn_calculate"
+        app:layout_constraintTop_toBottomOf="@id/sexoRadioGroup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/text_calculator"
+        app:layout_constraintStart_toStartOf="@id/text_calculator" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

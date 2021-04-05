@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_marginTop="18dp"
+    android:layout_marginLeft="18dp"
+    android:layout_marginRight="18dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity">
+    
+    <TextView
+        android:id="@+id/dataTxt"
+        android:text="24 / 03 / 2020"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txt_title_result"
+        android:textColor="@color/teal_700"
+        android:textStyle="bold"
+        style="@style/result_txt"
+        android:text="@string/result_txt" />
+
+    <TextView
+        android:id="@+id/txt_imc"
+        style="@style/result_data_txt"
+        android:textSize="20sp"
+        android:text="Resultado: Saudável" />
+
+    <TextView
+        android:id="@+id/txt_difference"
+        style="@style/result_data_txt"
+        android:textSize="20sp"
+        android:text="Diferença: 0Kg"
+        android:layout_marginBottom="32dp" />
+
+
+    <TextView
+        android:id="@+id/txt_magreza_grave"
+        style="@style/result_data_txt"
+        android:text="@string/magreza_grave" />
+
+    <TextView
+        android:id="@+id/txt_magreza_moderada"
+        style="@style/result_data_txt"
+        android:text="Magreza moderada: 16.0 - 16.9" />
+
+    <TextView
+        android:id="@+id/txt_magreza_leve"
+        style="@style/result_data_txt"
+        android:text="Magreza leve: 17.0 - 18.4" />
+
+    <TextView
+        android:id="@+id/txt_saudavel"
+        style="@style/result_data_txt"
+        android:text="Saudável: 18.5 - 24.9" />
+
+    <TextView
+        android:id="@+id/txt_sobrepeso"
+        style="@style/result_data_txt"
+        android:text="Sobrepeso: 25.0 - 29.9" />
+
+    <TextView
+        android:id="@+id/txt_obesidade_1"
+        style="@style/result_data_txt"
+        android:text="Obesidade grau I: 30.0 - 34.9" />
+
+    <TextView
+        android:id="@+id/txt_obesidade_2"
+        style="@style/result_data_txt"
+        android:text="Obesidade grau II: 35.0 - 39.9" />
+
+    <TextView
+        android:id="@+id/txt_obesidade_3"
+        style="@style/result_data_txt"
+        android:text="Obesidade grau III: > 40.0" />
+
+
+    <LinearLayout
+        android:layout_marginTop="44dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:text="@string/back_btn"
+            style="@style/btn_result" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:text="@string/save_btn"
+            android:visibility="gone"
+            style="@style/btn_result" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:text="Excluir"
+            android:visibility="gone"
+            style="@style/btn_result" />
+
+    </LinearLayout>
+
+</LinearLayout>

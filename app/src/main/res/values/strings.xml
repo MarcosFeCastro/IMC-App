@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">IMC</string>
+
+    <!-- Drawer e Toolbar -->
+    <string name="drawer_open">Abrir</string>
+    <string name="drawer_close">Fechar</string>
+
+    <!-- Form calculadora -->
+    <string name="peso_txt">Peso</string>
+    <string name="peso_input">ex: 68.5</string>
+    <string name="altura_txt">Altura</string>
+    <string name="altura_input">ex: 1.70</string>
+    <string name="idade_txt">Idade</string>
+    <string name="idade_input">ex: 18</string>
+    <string name="sexo_txt">Sexo</string>
+    <string name="sexo_input">Mascolino</string>
+    <string name="male">Masculino</string>
+    <string name="female">Feminino</string>
+    <!-- Botão calculadora -->
+    <string name="result_btn">Resultado</string>
+
+
+    <!-- Result Page -->
+    <string name="result_txt">Saudável</string>
+    <string name="back_btn">Voltar</string>
+    <string name="save_btn">Salvar</string>
+    <!-- Result Page -->
+    <string name="magreza_grave"><![CDATA[Magreza grave: < 16.0]]></string>
+
+
+</resources>
