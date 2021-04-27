@@ -1,4 +1,4 @@
-package com.app.imc.fragments.calculator
+package com.app.imc.presenter.fragments.calculator
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,8 +12,9 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.app.imc.R
-import com.app.imc.ResultActivity
-import com.app.imc.fragments.history.Imc
+import com.app.imc.presenter.ResultActivity
+import com.app.imc.domain.Imc
+import com.app.imc.viewmodel.CalculatorViewModel
 
 class CalculatorFragment : Fragment() {
 

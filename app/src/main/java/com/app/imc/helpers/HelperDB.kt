@@ -3,7 +3,7 @@ package com.app.imc.helpers
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.app.imc.fragments.history.Imc
+import com.app.imc.domain.Imc
 
 class HelperDB(
     context: Context?

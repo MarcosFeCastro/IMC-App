@@ -1,8 +1,8 @@
-package com.app.imc.fragments.calculator
+package com.app.imc.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.app.imc.fragments.history.Imc
+import com.app.imc.domain.Imc
 
 class CalculatorViewModel: ViewModel() {
 

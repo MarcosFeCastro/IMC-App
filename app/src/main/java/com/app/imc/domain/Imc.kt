@@ -1,4 +1,4 @@
-package com.app.imc.fragments.history
+package com.app.imc.domain
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

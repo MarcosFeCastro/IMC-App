@@ -1,4 +1,4 @@
-package com.app.imc
+package com.app.imc.presenter
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,17 +6,21 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import androidx.lifecycle.ViewModelProvider
+import com.app.imc.R
 import com.app.imc.application.ImcApplication
-import com.app.imc.fragments.history.Imc
-import kotlinx.android.synthetic.main.fragment_calculator.*
+import com.app.imc.domain.Imc
+import com.app.imc.viewmodel.ResultViewModel
 
 class ResultActivity : AppCompatActivity() {
 
     private lateinit var imc: Imc
+    private lateinit var resultViewModel: ResultViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
+        resultViewModel = ViewModelProvider(this).get(ResultViewModel::class.java)
         getExtras()
         bindViews()
         initListeners()
@@ -71,15 +75,11 @@ class ResultActivity : AppCompatActivity() {
     }
 
     private fun saveImc() {
-        try {
-            ImcApplication.instance.helperDB?.insertImc(imc)
-        } catch (ex: Exception) {
-            ex.printStackTrace()
-        }
+        resultViewModel.saveImc(imc)
     }
 
     private fun deleteImc(id: Int) {
-        ImcApplication.instance.helperDB?.deleteImc(id)
+        resultViewModel.deleteImc(id)
         finish()
     }
 

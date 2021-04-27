@@ -1,4 +1,4 @@
-package com.app.imc.fragments.history
+package com.app.imc.presenter.fragments.history
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.app.imc.R
 import com.app.imc.application.ImcApplication
+import com.app.imc.domain.Imc
 import java.lang.Exception
 
 // Classe para gerenciar a lista, obrigatória para RecyclerView
